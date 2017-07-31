@@ -1,0 +1,36 @@
+{
+  "name": "the-heart-of-lion",
+  "version": "1.0.0",
+  "description": "MVP Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JAER12392/hratx28-mvp.git"
+  },
+  "author": "Zeus <j.a.esquivelramos@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/JAER12392/hratx28-mvp/issues"
+  },
+  "homepage": "https://github.com/JAER12392/hratx28-mvp#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "browserify-middleware": "^7.1.0",
+    "dom": "0.0.3",
+    "eslint": "^4.3.0",
+    "express": "^4.15.3",
+    "forismatic-node": "^1.1.4",
+    "jquery": "^3.2.1",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.11.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
