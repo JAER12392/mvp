@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const motivation_URL = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=";
+const motivation_URL = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=25&callback=";
 
 export const getQuotes = (callback) => {
   $.ajax({
@@ -14,20 +14,3 @@ export const getQuotes = (callback) => {
   });
 }
 
-// export const getQuotes = (callback) => {
-//   $.ajax( {
-//     url: 'http://quotesondesign.com/wp-json/posts',
-//     success: function(data) {
-//       callback(data);
-//     },
-//     error: function(err) {
-//       console.error(err);
-//     }
-//   });
-// }
-
-// export const getQuotes = callback => {
-//   $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=3&callback=", function(a) {
-//     callback(a);
-//   });
-// }
