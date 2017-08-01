@@ -1,11 +1,15 @@
 import React from 'react';
 
 const Quote = (props) => {
-  console.log('props', props.quote);
+
+  var content = props.quote.content.split('<p>').join('').split('</p>').join('');
+  content = content.replace(/[^A-Za-z]+/g, ' ');
+
+  
   return (
     <div className="quote">
       <h3>{props.quote.title}</h3>
-      {props.quote.content}
+      {content}
       <h6>{props.quote.link}</h6>
     </div>
   )

@@ -17,7 +17,9 @@ class App extends React.Component {
         quotes: data
       });
     });
-  }
+  } 
+
+//Function that will help me render the information on the page with a click of a button 
 
 
 
