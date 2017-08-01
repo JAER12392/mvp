@@ -11,28 +11,21 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchQuotes();
-  }
-
-  fetchQuotes() {
+    let context = this;
     quoteModel.getQuotes((data) => {
-      console.log('Hi this is some cool data', data[0].title);
       this.setState({
-        
+        quotes: data
       });
     });
-
   }
-
-
 
 
 
 render() {
    return (
-      <div>
-       <h1> The Heart of a Lion </h1>
-       <QuotesBody quotes={this.state.quotes} />
+      <div className="main">
+        <h1> The Heart of a Lion </h1>
+        <QuotesBody quotes={this.state.quotes} />
       </div>
     );
   }

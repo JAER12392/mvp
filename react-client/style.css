@@ -1,0 +1,25 @@
+* {
+  text-align: center;
+}
+
+.top {
+  background-color: #202020;
+}
+
+.main {
+  background-color: #C0C0C0;
+}
+
+.subtitle {
+  margin-bottom: 100px;
+}
+
+button {
+  margin-bottom: 50px;
+  width: 48%;
+}
+
+.quote {
+  border-style: dotted solid double dashed;
+  background-color: #D4AF37;
+}
