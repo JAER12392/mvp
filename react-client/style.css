@@ -1,23 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 * {
   text-align: center;
+  font-size: 107%;
+  font-family: 'Raleway', sans-serif;
 }
 
 
 
 .main {
   background-color: #C0C0C0;
+  border-radius: 25px;
 }
 
 .subtitle {
   margin-bottom: 100px;
 }
 
+.blacktiger {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 25px;
+}
+
+ h1, h2, h3, h6 {
+  font-family: 'Satisfy', cursive;
+}
+
 button {
   margin-bottom: 50px;
-  width: 48%;
+  width: 30%;
+  background-color: white;
+  color: black;
+  border: 6px solid #D4AF37;
+  border-radius: 25px;
+  font-family: 'Satisfy', cursive;
 }
 
 .quote {
   border-style: dotted solid double dashed;
   background-color: #D4AF37;
+  border-radius: 25px;
+  
 }

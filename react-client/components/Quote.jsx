@@ -1,9 +1,12 @@
 import React from 'react';
 
 const Quote = (props) => {
-
-  var content = props.quote.content.split('<p>').join('').split('</p>').join('');
-  content = content.replace(/[^A-Za-z]+/g, ' ');
+  console.log('hi this is props', props);
+  
+  if (props.quote.content) {
+    var content = props.quote.content.split('<p>').join('').split('</p>').join('');
+    content = content.replace(/[^A-Za-z]+/g, ' '); 
+  }
 
   
   return (
