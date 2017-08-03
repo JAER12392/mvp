@@ -3,6 +3,9 @@ var browserify = require('browserify-middleware');
 var morgan = require('morgan');
 var path = require('path');
 var config = require('./config.js');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/quotes');
 
 var app = express();
 
