@@ -5,7 +5,7 @@ const QuotesBody = (props) => {
   console.log(props)
   return (  
     <div>
-       <p className="subtitle"> Are you ready to climb that mountain my brotherin? </p>
+       <p className="subtitle"> Are you ready to climb that mountain my brethren? </p>
       <button onClick={props.handleClick}>A lion sleeps in the heart of every man and woman</button>
         { 
           props.quote.map((quote) => {
