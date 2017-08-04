@@ -40,6 +40,10 @@ button {
   font-family: 'Satisfy', cursive;
 }
 
+.save {
+  margin-right: 60px;
+}
+
 .quote {
   border-style: dotted solid double dashed;
   background-color: #D4AF37;

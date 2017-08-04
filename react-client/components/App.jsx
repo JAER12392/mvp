@@ -1,6 +1,6 @@
 import React from 'react';
 import * as quoteModel from '../models/quotes.js';
-import QuotesBody from './QuotesBody.jsx';
+import QuotesBody from './QuotesBody.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class App extends React.Component {
       quotes: []
     };
     this.onClickQuote = this.onClickQuote.bind(this); 
+    this.onSubmit = this.onSubmit.bind(this); 
   }
 
   componentDidMount() {
@@ -33,9 +34,29 @@ class App extends React.Component {
   
 onClickQuote() {
   var quotesArr = this.state.quote;
-  quotesArr.unshift(this.state.quotes.shift());
-  this.setState({
-    quote: quotesArr
+  var newQuote = this.state.quotes.shift()
+
+  quoteModel.saveQuote(newQuote, (quote1) => {
+    quotesArr.unshift(quote1)
+    this.setState({
+      quote: quotesArr
+    });
+  })
+}
+
+onSubmit(e) {
+  e.preventDefault()
+  var quotesArr = this.state.quote;
+  
+  quoteModel.saveQuote({
+    content: e.target.content.value,
+    title: e.target.title.value,
+    link: e.target.link.value
+  }, (quote1) => {
+    quotesArr.unshift(quote1)
+    this.setState({
+      quote: quotesArr
+    });
   })
 }
 
@@ -45,6 +66,15 @@ render() {
       <div className="main">
         <h1> The Heart of a Lion </h1>
         <QuotesBody quote={this.state.quote} handleClick={this.onClickQuote}/>
+        <form onSubmit={this.onSubmit}>
+          <input type="text" name="content" />
+          <br />
+          <input type="text" name="title" />
+          <br />
+          <input type="text" name="link" />
+          <br />
+          <input type="submit" />
+        </form>
       </div>
     );
   }
