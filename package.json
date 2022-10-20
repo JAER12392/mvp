@@ -20,7 +20,7 @@
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "babelify": "^7.3.0",
+    "babelify": "^9.0.0",
     "body-parser": "^1.17.2",
     "browserify": "^14.4.0",
     "browserify-middleware": "^7.1.0",
